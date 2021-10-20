@@ -59,7 +59,7 @@
     display: grid;
     grid-template: 
     'left-menu e-mails quick-settings side-panel' 1fr /
-     230px 1fr  250px 50px;
+     250px 1fr  250px 50px;
 }
 .left-menu {
     grid-area: left-menu;
@@ -142,17 +142,44 @@
     outline: none;
 }
 .header3 {
-    padding-right: 20px;
+    padding-left: 10px;
     display: flex;
     align-items: center;
+    justify-content: end;
     font-size: medium;
     
 }
 .header3 img {
     border-radius: 100%;
     height: 40px;
+    border: solid 5px whitesmoke;
     margin: 10px;
 }
 .header3 span {
     margin: 5px;
 }
+.chat img {
+    width: 30px;
+    border-radius: 100%;
+}
+
+.menu-option {
+    display: flex;
+    align-items: center;
+}
+.meet{
+    vertical-align: baseline;
+}
+.chat h4 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.compose button {
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50px;
+    }
