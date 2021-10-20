@@ -12,7 +12,13 @@
 .left-menu,
 .e-mails,
 .quick-settings,
-.side-panel {
+.side-panel,
+.tabs,
+.e-mail-list,
+.chat,
+.compose,
+.meet,
+.folders{
     border: solid 1px black;
 }
 
@@ -54,4 +60,52 @@
     grid-template: 
     'left-menu e-mails quick-settings side-panel' 1fr /
      230px 1fr  200px 50px;
+}
+.left-menu {
+    grid-area: left-menu;
+}
+.e-mails {
+    grid-area: e-mails;
+}
+.quick-settings {
+    grid-area: quick-settings;
+}
+.side-panel {
+    grid-area: side-panel;
+}
+
+.left-menu {
+    display: grid;
+    grid-template: 
+    'compose' 50px
+    'folders' 1fr
+    'meet' 100px
+    'chat' 1fr /
+    1fr;
+}
+.compose {
+    grid-area: compose;
+}
+.folders {
+    grid-area: folders;
+}
+.meet {
+    grid-area: meet;
+}
+.chat {
+    grid-area: chat;
+}
+
+.e-mails {
+    display: grid;
+    grid-template: 
+    'tabs' 50px
+    'e-mail-list' 1fr/
+    1fr;
+}
+.tabs {
+    grid-area: tabs;
+}
+.e-mail-list {
+    grid-area: e-mail-list;
 }
