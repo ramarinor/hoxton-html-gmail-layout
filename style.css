@@ -4,101 +4,54 @@
     box-sizing: border-box;
 }
 
+.main,
+.header,
 .header1,
 .header2,
 .header3,
 .left-menu,
 .e-mails,
-.right-menu {
-    border: solid 1px black;
-}
-.compose,
-.folders,
-.meet,
-.chat,
-.tabs,
-.e-mail-list,
-.footer,
 .quick-settings,
 .side-panel {
-    border: solid 1px red;
+    border: solid 1px black;
 }
 
 .container {
     display: grid;
     grid-template: 
-    'header1 header2 header3' 100px
-    'left-menu e-mails right-menu' 1fr/
-    230px 1fr 300px;
+    'header' 100px
+    'main' 1fr/
+     1fr ;
     height: 100vh;
     width: 100vw;
 }
-.header1
-{
+.header {
+    grid-area: header;
+}
+.main {
+    grid-area: main;
+}
+
+.header {
+    display: grid;
+    grid-template: 
+    'header1 header2 header 3' 1fr /
+     230px 1fr  250px;
+}
+
+.header1{
     grid-area: header1;
 }
-.header2 {
+.header2{
     grid-area: header2;
 }
-.header3 {
+.header3{
     grid-area: header3;
 }
-.left-menu {
-    grid-area: left-menu;
-}
-.e-mails {
-    grid-area: e-mails;
-}
-.right-menu {
-    grid-area: right-menu;
-}
 
-.left-menu {
+.main {
     display: grid;
     grid-template: 
-    'compose' 50px
-    'folders' 1fr
-    'meet' 100px
-    'chat' 1fr /
-    230px;
-}
-.compose {
-    grid-area: compose;
-}
-.folders {
-    grid-area: folders;
-}
-.meet {
-    grid-area: meet;
-}
-.chat {
-    grid-area: chat;
-}
-
-.e-mails {
-    display: grid;
-    grid-template: 
-    'tabs' 50px
-    'e-mail-list' 1fr/
-    1fr;
-}
-.tabs {
-    grid-area: tabs;
-}
-.e-mail-list {
-    grid-area: e-mail-list;
-}
-
-.right-menu {
-    display: grid;
-    grid-template: 
-    'quick-settings side-panel' 1fr /
-    1fr 50px;
-}
-
-.quick-settings {
-    grid-area: quick-settings;
-}
-.side-panel {
-    grid-area: side-panel;
+    'left-menu e-mails quick-settings side-panel' 1fr /
+     230px 1fr  200px 50px;
 }
