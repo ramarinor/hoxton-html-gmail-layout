@@ -79,8 +79,7 @@
     display: grid;
     grid-template: 
     'tabs' 50px
-    'e-mail-list' 1fr
-    'footer' 50px /
+    'e-mail-list' 1fr/
     1fr;
 }
 .tabs {
@@ -88,9 +87,6 @@
 }
 .e-mail-list {
     grid-area: e-mail-list;
-}
-.footer {
-    grid-area: footer;
 }
 
 .right-menu {
